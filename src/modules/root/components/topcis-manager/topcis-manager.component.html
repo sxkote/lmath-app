@@ -1,0 +1,16 @@
+<lb-shared-table [data]='this.table' *ngIf='this.table'>
+  <ng-template #menuTemplate>
+    <p-button styleClass='p-button-outlined mr-2' label="{{'lb-shared.common.refresh'|translate}}"
+              icon='bi bi-arrow-repeat' (click)='this.table.reload()'></p-button>
+    <p-button styleClass='p-button-secondary p-button-outlined mr-2' label="{{'lb-shared.common.create'|translate}}"
+              icon='bi bi-plus-lg' (click)='this.showCreateItem()'></p-button>
+  </ng-template>
+</lb-shared-table>
+
+<lb-shared-modal-dialog header='Create' [model]='this.modalCreate' (apply)='this.createItem($event)'>
+  <lmath-topic-modify [model]='this.modalCreate.data'></lmath-topic-modify>
+</lb-shared-modal-dialog>
+
+<lb-shared-modal-dialog header='Modify' [model]='this.modalModify' (apply)='this.modifyItem($event)'>
+  <lmath-topic-modify [model]='this.modalModify.data'></lmath-topic-modify>
+</lb-shared-modal-dialog>

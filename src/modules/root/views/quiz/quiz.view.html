@@ -1,0 +1,40 @@
+<div class='flex justify-content-center mt-5'>
+  <div *ngIf='this.isLoaded && !!this.quiz' class='quiz-container'>
+    <div *ngIf='this.isCompleted else question'>
+      <p-card>
+        <form>
+          <p class='quiz-complete text-center'>{{'math.quiz.complete-header'|translate}}</p>
+          <p class='mt-2 text-center'>{{'math.quiz.complete-info'|translate}}</p>
+          <div class='text-center mt-5'>
+            <button type='submit' pButton [label]='"math.quiz.complete-button"|translate' class='p-button-lg'
+                    (click)='this.complete()'></button>
+          </div>
+        </form>
+      </p-card>
+    </div>
+    <ng-template #question>
+      <form #answerForm='ngForm'>
+        <p-card>
+          <p class='text-right'>
+            {{'math.quiz.question-number'|translate}}
+            {{this.answers.length + 1}}
+            {{'math.quiz.question-of'|translate}}
+            {{this.quiz.questions.length}}</p>
+          <p class='quiz-question text-center'>{{this.currentQuestionText}}</p>
+          <div class='param-container'>
+            <p class='param text-center'>
+              <label>{{'math.quiz.response-label'|translate}}</label>
+              <input pInputText type='number' name='answer' placeholder='' min='0' required
+                     [(ngModel)]='this.currentAnswer' />
+            </p>
+          </div>
+          <div class='text-center mt-5'>
+            <button pButton type='submit' [label]='"math.quiz.response-button"|translate'
+                    class='p-button-lg' [disabled]='!this.answerForm.valid'
+                    (click)='this.setAnswer()'></button>
+          </div>
+        </p-card>
+      </form>
+    </ng-template>
+  </div>
+</div>

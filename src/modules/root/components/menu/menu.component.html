@@ -33,9 +33,14 @@
           <i class="bi bi-gear mr-2"></i><span>{{'Menu-Public'|translate}}</span><span class="p-ink"></span></a>
       </li>
       <li lbUserAccess>
-        <a pRipple="" routerLink="/menu-private"
+        <a pRipple="" routerLink="/topics"
            class="p-ripple p-element flex align-items-center font-medium cursor-pointer transition-colors transition-duration-150 menu-link">
-          <i class="bi bi-gear mr-2"></i><span>{{'Menu-Private'|translate}}</span><span class="p-ink"></span></a>
+          <i class="bi bi-gear mr-2"></i><span>{{'menu.topics'|translate}}</span><span class="p-ink"></span></a>
+      </li>
+      <li lbUserAccess>
+        <a pRipple="" routerLink="/statistics"
+           class="p-ripple p-element flex align-items-center font-medium cursor-pointer transition-colors transition-duration-150 menu-link">
+          <i class="bi bi-gear mr-2"></i><span>{{'menu.statistics'|translate}}</span><span class="p-ink"></span></a>
       </li>
     </ul>
 
@@ -70,6 +75,13 @@
             <a pRipple="" routerLink="/profile"
                class="p-ripple p-element flex align-items-center transition-colors transition-duration-150 menu-link">
               <i class="bi bi-person mr-2"></i><span class="font-medium">{{'menu.profile'|translate}}</span><span
+              class="p-ink"></span>
+            </a>
+          </li>
+          <li lbUserAccess='Redactor'>
+            <a pRipple="" routerLink="/admin"
+               class="p-ripple p-element flex align-items-center transition-colors transition-duration-150 menu-link">
+              <i class="bi bi-person mr-2"></i><span class="font-medium">{{'menu.admin'|translate}}</span><span
               class="p-ink"></span>
             </a>
           </li>

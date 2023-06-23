@@ -31,13 +31,17 @@
       "password-new": "New Password",
       "password-confirmation": "Confirmation"
     },
+    "captcha": {
+      "input": "Text from image"
+    },
     "toasts": {
       "login-successful": "Login successfully",
       "login-error": "Authorization failed",
       "profile-password-change-successful": "Password changed successfully",
       "profile-password-change-error": "Could not change the password",
       "registration-successful": "Registration completed",
-      "registration-error": "Registration failed"
+      "registration-error": "Registration failed",
+      "captcha-error": "Wrong captcha input"
     }
   }
 }

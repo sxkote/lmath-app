@@ -7,7 +7,7 @@
   "overrides": [
     {
       "files": [
-        "*.ts"
+        "src/**/*.ts"
       ],
       "parserOptions": {
         "project": ["tsconfig.(app|spec).json"]
@@ -35,7 +35,7 @@
           "error",
           {
             "type": "attribute",
-            "prefix": "lbox",
+            "prefix": "lmath",
             "style": "camelCase"
           }
         ],
@@ -43,7 +43,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "lbox",
+            "prefix": "lmath",
             "style": "kebab-case"
           }
         ],

@@ -3,7 +3,40 @@
     "sign-in": "Вход",
     "logout": "Выход",
     "home": "Главная Страница",
-    "profile": "Профиль"
+    "profile": "Профиль",
+    "admin": "Админка",
+    "topics": "Темы для повторения",
+    "statistics": "Статистика"
+  },
+  "math": {
+    "topic": {
+      "name": "Идентификатор",
+      "title": "Название",
+      "comment": "Комментарий",
+      "age": "Возраст",
+      "quizAmount": "Количество вопросов"
+    },
+    "topics-list": "Список тем для повторения",
+    "quiz": {
+      "topic": "Тема",
+      "created": "Начало",
+      "completed": "Конец",
+      "questionsCount": "Вопросов",
+      "correctAnswers": "Правильно",
+      "state": "Статус",
+      "complete-header": "Поздравляем, вы ответили на все вопросы",
+      "complete-info": "Пожалуйста, нажмите кнопку 'Завершить Тест' для сохранения результатов",
+      "complete-button": "Завершить тест",
+      "question-number": "Вопрос №",
+      "question-of": "из",
+      "response-label": "Ваш ответ:",
+      "response-button": "Ответить"
+    },
+    "toasts": {
+      "empty-answer": "Пожалуйста, укажите ваш ответ!",
+      "quiz-complete": "Спасибо, тест завершен!",
+      "quiz-result-header": "Статистика"
+    }
   },
   "toast": {
     "success": "Успех",

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'lbox-profile',
+  selector: 'lmath-profile',
   templateUrl: './profile.view.html',
   styleUrls: ['./profile.view.scss'],
 })

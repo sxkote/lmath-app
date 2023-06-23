@@ -1,0 +1,14 @@
+.quiz-container {
+  max-width: 80vw;
+  width: 100%;
+
+  .quiz-question, .quiz-complete {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+}
+
+:host ::ng-deep input {
+  text-align: center!important;
+}

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'lbox-app',
+  selector: 'lmath-app',
   templateUrl: './app.view.html',
   styleUrls: ['./app.view.scss'],
 })

@@ -17,10 +17,8 @@ import { InputNumberModule } from 'primeng/inputnumber';
 import { InputTextModule } from 'primeng/inputtext';
 import { MessageService } from 'primeng/api';
 
-import { RECAPTCHA_SETTINGS, RecaptchaSettings } from 'ng-recaptcha';
-
 import { APP_CONFIGURATION, ConfigurationService, LBoxSharedModule, MultiTranslateHttpLoader } from 'lbox-shared';
-import { ErrorInterceptor, JwtInterceptor, LBoxAuthModule } from 'lbox-auth';
+import { ErrorInterceptor, JWT_INTERCEPT_URLS, JwtInterceptor, LBoxAuthModule } from 'lbox-auth';
 
 import { RootRoutingModule } from './root-routing.module';
 
@@ -32,6 +30,14 @@ import { LoginView } from './views/login/login.view';
 import { MenuComponent } from './components/menu/menu.component';
 import { RecoveryView } from './views/recovery/recovery.view';
 import { ProfileView } from './views/profile/profile.view';
+import { TopcisManagerComponent } from './components/topcis-manager/topcis-manager.component';
+import { AdminView } from './views/admin/admin.view';
+import { TabViewModule } from 'primeng/tabview';
+import { TopicModifyComponent } from './components/topic-modify/topic-modify.component';
+import { CardModule } from 'primeng/card';
+import { TopicsView } from './views/topics/topics.view';
+import { QuizView } from './views/quiz/quiz.view';
+import { StatisticsView } from './views/statistics/statistics.view';
 
 export function createTranslateLoader(http: HttpClient) {
   return new MultiTranslateHttpLoader(http, [
@@ -48,7 +54,20 @@ export function configServiceFactory(configService: ConfigurationService) {
 }
 
 @NgModule({
-  declarations: [AppView, HomeView, LoginView, MenuComponent, RecoveryView, ProfileView],
+  declarations: [
+    AppView,
+    HomeView,
+    LoginView,
+    MenuComponent,
+    RecoveryView,
+    ProfileView,
+    TopcisManagerComponent,
+    AdminView,
+    TopicModifyComponent,
+    TopicsView,
+    QuizView,
+    StatisticsView,
+  ],
   imports: [
     CommonModule,
     BrowserModule,
@@ -74,6 +93,8 @@ export function configServiceFactory(configService: ConfigurationService) {
     CheckboxModule,
     InputNumberModule,
     InputTextModule,
+    TabViewModule,
+    CardModule,
   ],
   providers: [
     //{ provide: APP_BASE_HREF, useValue: environment.baseHref },
@@ -85,11 +106,12 @@ export function configServiceFactory(configService: ConfigurationService) {
       deps: [ConfigurationService],
       multi: true,
     },
+    { provide: JWT_INTERCEPT_URLS, useValue: [environment.lboxUrl.base, environment.apiUrl, environment.lboxUrl.auth] },
     { provide: APP_CONFIGURATION, useValue: environment },
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
-    { provide: RECAPTCHA_SETTINGS, useValue: { siteKey: environment.recaptcha.siteKey } as RecaptchaSettings },
   ],
   bootstrap: [AppView],
 })
-export class RootModule {}
+export class RootModule {
+}

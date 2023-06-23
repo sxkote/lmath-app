@@ -1,0 +1,22 @@
+<div class='param-container'>
+  <div class='param'>
+    <label>{{'math.topic.name'|translate}}</label>
+    <input pInputText type='text' [(ngModel)]='this.model.name' required placeholder='' />
+  </div>
+  <div class='param'>
+    <label>{{'math.topic.title'|translate}}</label>
+    <input pInputText type='text' [(ngModel)]='this.model.title' required placeholder='' />
+  </div>
+  <div class='param'>
+    <label>{{'math.topic.comment'|translate}}</label>
+    <input pInputText type='text' [(ngModel)]='this.model.comment' placeholder='' />
+  </div>
+  <div class='param'>
+    <label>{{'math.topic.age'|translate}}</label>
+    <p-inputNumber inputId='integeronly' [(ngModel)]='this.model.age' [min]='1' [max]='99'></p-inputNumber>
+  </div>
+  <div class='param'>
+    <label>{{'math.topic.quizAmount'|translate}}</label>
+    <p-inputNumber inputId='integeronly' [(ngModel)]='this.model.quizAmount' [min]='1' [max]='100'></p-inputNumber>
+  </div>
+</div>

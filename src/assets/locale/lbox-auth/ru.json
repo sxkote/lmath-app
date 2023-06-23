@@ -31,13 +31,17 @@
       "password-new": "Новый пароль",
       "password-confirmation": "Подтверждение"
     },
+    "captcha": {
+      "input": "Код с картинки"
+    },
     "toasts": {
       "login-successful": "Вход выполнен",
       "login-error": "Ошибка авторизации",
       "profile-password-change-successful": "Пароль успешно изменен",
       "profile-password-change-error": "Не удалось изменить пароль",
       "registration-successful": "Регистрация прошла успешно",
-      "registration-error": "Ошибка регистрации"
+      "registration-error": "Ошибка регистрации",
+      "captcha-error": "Не верный код с картинки"
     }
   }
 }

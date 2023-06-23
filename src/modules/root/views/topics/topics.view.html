@@ -1,0 +1,12 @@
+<div *ngIf='this.isLoaded' class='topics-list flex justify-content-center'>
+  <div class='topics-list-content'>
+    <h1>{{'math.topics-list'|translate}}</h1>
+    <div class='topic-item cursor-pointer mt-3' [routerLink]='["quiz", topic.id]' *ngFor='let topic of this.topics'>
+      <p-card [header]='topic.title'>
+        <p class='m-0'>{{topic.comment}}</p>
+        <p>{{'math.topic.age'|translate}}: {{topic.age}}+, {{'math.topic.quizAmount'|translate}}
+          : {{topic.quizAmount}}</p>
+      </p-card>
+    </div>
+  </div>
+</div>

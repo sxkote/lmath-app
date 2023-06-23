@@ -1,0 +1,14 @@
+<lb-shared-table [data]='this.table' *ngIf='this.table'>
+  <ng-template #menuTemplate>
+    <p-button styleClass='p-button-outlined mr-2' label="{{'lb-shared.common.refresh'|translate}}"
+              icon='bi bi-arrow-repeat' (click)='this.table.reload()'></p-button>
+  </ng-template>
+  <ng-template #rowTemplate let-item>
+    <td lbTableCell='topic.title'><span>{{item.topic.title}}</span></td>
+    <td lbTableCell='created'><span>{{item.created|date:'dd.MM.yyyy HH:mm'}}</span></td>
+    <td lbTableCell='completed'><span>{{item.completed|date:'dd.MM.yyyy HH:mm'}}</span></td>
+    <td lbTableCell='questionsCount'><span>{{item.questionsCount}}</span></td>
+    <td lbTableCell='correctAnswers'><span>{{item.correctAnswers}}</span></td>
+    <td lbTableCell='state'><span>{{item.state}}</span></td>
+  </ng-template>
+</lb-shared-table>

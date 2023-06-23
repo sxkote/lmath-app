@@ -3,7 +3,40 @@
     "sign-in": "Sign In",
     "logout": "Logout",
     "home": "Home",
-    "profile": "Profile"
+    "profile": "Profile",
+    "admin": "Admin",
+    "topics": "Topics",
+    "statistics": "Statistics"
+  },
+  "math": {
+    "topic": {
+      "name": "Name",
+      "title": "Title",
+      "comment": "Comment",
+      "age": "Age",
+      "quizAmount": "Quiz Amount"
+    },
+    "topics-list": "Topics List",
+    "quiz": {
+      "topic": "Topic",
+      "created": "Created",
+      "completed": "Completed",
+      "questionsCount": "Questions",
+      "correctAnswers": "Correct",
+      "state": "State",
+      "complete-header": "Congratulations, you have answered all questions",
+      "complete-info": "Please, confirm your answers by clicking 'Complete' button",
+      "complete-button": "Complete",
+      "question-number": "Question #",
+      "question-of": "of",
+      "response-label": "Your response:",
+      "response-button": "Answer"
+    },
+    "toasts": {
+      "empty-answer": "Please, provide your answer!",
+      "quiz-complete": "Quiz has completed!",
+      "quiz-result-header": "Statistics"
+    }
   },
   "toast": {
     "success": "Success",

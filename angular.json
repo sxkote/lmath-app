@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "LBoxAppBase": {
+    "LMathApp": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -12,12 +12,12 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "lbox",
+      "prefix": "lmath",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/lbox-app-base",
+            "outputPath": "dist/lmath-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -87,10 +87,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "LBoxAppBase:build:production"
+              "browserTarget": "LMathApp:build:production"
             },
             "development": {
-              "browserTarget": "LBoxAppBase:build:development"
+              "browserTarget": "LMathApp:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -98,7 +98,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "LBoxAppBase:build"
+            "browserTarget": "LMathApp:build"
           }
         },
         "test": {

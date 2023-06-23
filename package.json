@@ -1,5 +1,5 @@
 {
-  "name": "lbox-app-base",
+  "name": "lmath-app",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -22,9 +22,8 @@
     "@ngx-translate/core": "^14.0.0",
     "@ngx-translate/http-loader": "^7.0.0",
     "bootstrap-icons": "^1.10.5",
-    "lbox-auth": "file:../npm/lbox-auth.tgz",
-    "lbox-shared": "file:../npm/lbox-shared.tgz",
-    "ng-recaptcha": "^11.0.0",
+    "lbox-auth": "file:../../LBox/npm/lbox-auth.tgz",
+    "lbox-shared": "file:../../LBox/npm/lbox-shared.tgz",
     "primeflex": "^3.3.1",
     "primeng": "^15.4.1",
     "rxjs": "~7.8.0",
@@ -43,7 +42,7 @@
     "@types/jasmine": "~4.3.0",
     "@typescript-eslint/eslint-plugin": "5.48.2",
     "@typescript-eslint/parser": "5.48.2",
-    "eslint": "^8.33.0",
+    "eslint": "8.33.0",
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jasmine": "^4.1.3",

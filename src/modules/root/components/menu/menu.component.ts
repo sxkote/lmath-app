@@ -4,7 +4,7 @@ import { ConfigurationService } from 'lbox-shared';
 import { AuthService } from 'lbox-auth';
 
 @Component({
-  selector: 'lbox-menu',
+  selector: 'lmath-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss'],
 })

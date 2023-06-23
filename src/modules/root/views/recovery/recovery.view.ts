@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { firstValueFrom } from 'rxjs';
 
 @Component({
-  selector: 'lbox-recovery',
+  selector: 'lmath-recovery',
   templateUrl: './recovery.view.html',
   styleUrls: ['./recovery.view.scss'],
 })

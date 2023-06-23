@@ -3,3 +3,11 @@
 @import "primeflex/primeflex";
 
 @import "node_modules/lbox-shared/assets/styles/default";
+
+.param-container, .param-container-inline {
+  .param {
+    .p-component {
+      width: 100%;
+    }
+  }
+}
