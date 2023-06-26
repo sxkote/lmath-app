@@ -1,12 +1,31 @@
-.menu{
+@import "node_modules/lbox-shared/assets/styles/utils/variables";
+
+$color-title: #646fcb;
+
+.menu {
   height: var(--theme-menu-height);
 
-  .menu-link{
+  .menu-link {
     padding: 0.6em;
     border-radius: var(--theme-border-radius);
   }
 
-  img.title-image{
-    height: 32px;
+  a.title-link {
+    color: $color-title;
+
+    img.title-image {
+      height: calc($lb-menu-height - 8px);
+    }
+
+    .title-label {
+      font-size: 1.2em;
+      font-weight: bolder;
+      margin-left: 0.4rem;
+    }
+
+    &:hover, &:visited, &:focus {
+      color: $color-title;
+    }
   }
+
 }

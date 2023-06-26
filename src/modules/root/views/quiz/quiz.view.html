@@ -20,12 +20,12 @@
             {{this.answers.length + 1}}
             {{'math.quiz.question-of'|translate}}
             {{this.quiz.questions.length}}</p>
-          <p class='quiz-question text-center'>{{this.currentQuestionText}}</p>
+          <p class='quiz-question text-center'>{{this.currentQuestion?.question ?? ''}}</p>
           <div class='param-container'>
             <p class='param text-center'>
               <label>{{'math.quiz.response-label'|translate}}</label>
               <input pInputText type='number' name='answer' placeholder='' min='0' required
-                     [(ngModel)]='this.currentAnswer' />
+                     [(ngModel)]='this.currentAnswer' #inputAnswer />
             </p>
           </div>
           <div class='text-center mt-5'>

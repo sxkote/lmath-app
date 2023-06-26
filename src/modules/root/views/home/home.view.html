@@ -1,1 +1,28 @@
-<p>home works!</p>
+<div class='full-height'>
+  <div class='flex align-items-center justify-content-center h-full p-2'>
+    <div class='grid' style='min-width:60vw;'>
+      <div class='col-12 md:col-6'>
+        <div class='flex align-items-center justify-content-center'>
+          <div>
+            <div class='text-2xl md:text-3xl lg:text-4xl p-3 text-center'>
+              {{'math.home.line-1'|translate}}
+            </div>
+            <div class='text-xl md:text-2xl lg:text-3xl p-3 text-center'>
+              {{'math.home.line-2'|translate}}<br>
+              <span class='text-danger'>{{'math.home.line-3'|translate}}</span><br>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='col-12 md:col-6 mt-6 md:mt-0 pt-4 text-center'>
+        <img src='assets/images/logo.png' alt='LMath'>
+        <div>
+          <button pButton routerLink='/topics' class='p-button p-button-info p-button-md'
+                  icon='bi bi-list-check' label="{{'menu.topics'|translate}}"></button>
+          <button pButton routerLink='/login' class='p-button p-button-md ml-2'
+                  icon='bi bi-box-arrow-in-right' label="{{'menu.sign-in'|translate}}"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

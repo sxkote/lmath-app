@@ -21,11 +21,12 @@ export class QuizView implements OnInit {
   isCompleted = false;
 
   @ViewChild('answerForm') answerForm!: NgForm;
+  @ViewChild('inputAnswer') inputAnswer!: any;
 
   constructor(private route: ActivatedRoute,
-    private router: Router,
-    private quizService: QuizService,
-    private dappService: DappService) {
+              private router: Router,
+              private quizService: QuizService,
+              private dappService: DappService) {
   }
 
   async ngOnInit() {
@@ -33,6 +34,13 @@ export class QuizView implements OnInit {
     this.topicID = params['topicID'];
 
     await this.reload();
+  }
+
+  focusInput(timeout: number = 100) {
+    // this will make the execution after the visibility changes
+    setTimeout(() => {
+      this.inputAnswer.nativeElement.focus();
+    }, timeout);
   }
 
   fakeQuiz(): Quiz {
@@ -53,15 +61,12 @@ export class QuizView implements OnInit {
     this.quiz = await this.quizService.generateQuiz(this.topicID);
     //this.quiz = this.fakeQuiz();
     this.isLoaded = !!this.quiz;
+    this.focusInput();
   }
 
   get currentQuestion(): QuizQuestion | undefined {
     if (!this.quiz || this.isCompleted) return undefined;
     return this.quiz.questions[this.answers.length];
-  }
-
-  get currentQuestionText(): string {
-    return this.currentQuestion?.question ?? '';
   }
 
   setAnswer() {
@@ -70,10 +75,6 @@ export class QuizView implements OnInit {
       console.error('No current question to answer');
       return;
     }
-
-    // получаем значение текущего ответа
-    //const currentAnswer = this.answerForm.value.answer;
-    console.log(this.answerForm.value, this.answerForm.name);
 
     if (!this.answerForm.valid || !this.currentAnswer) {
       this.dappService.addToastError('math.toasts.empty-answer');
@@ -84,6 +85,7 @@ export class QuizView implements OnInit {
     this.currentAnswer = '';
     this.answerForm.reset();
     this.isCompleted = !!this.quiz && this.answers.length >= this.quiz.questions.length;
+    this.focusInput();
   }
 
   async complete() {
@@ -96,11 +98,10 @@ export class QuizView implements OnInit {
   }
 
   @HostListener('window:keyup.enter', ['$event', 'undefined'])
-  onEnterOrClick(enterEvent: any) {
+  async onEnterOrClick(enterEvent: any) {
     enterEvent.stopPropagation();
     if (enterEvent && this.isCompleted) {
-      console.log(enterEvent);
-      this.complete();
+      await this.complete();
     }
   }
 }

@@ -1,0 +1,11 @@
+@import "node_modules/lbox-shared/assets/styles/utils/variables";
+
+.full-height {
+  height: 100vh;
+  margin-top: -$lb-menu-height;
+  padding-top: $lb-menu-height+10px;
+}
+
+.text-danger {
+  color: var(--theme-color-danger);
+}

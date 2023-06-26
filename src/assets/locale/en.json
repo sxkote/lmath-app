@@ -6,9 +6,29 @@
     "profile": "Profile",
     "admin": "Admin",
     "topics": "Topics",
-    "statistics": "Statistics"
+    "statistics": "Statistics",
+    "calcs": {
+      "title": "Calculators",
+      "credit": "Credit"
+    }
   },
   "math": {
+    "home": {
+      "line-1": "Mathematics & Calculations",
+      "line-2": "Learn to count, calculate and solve",
+      "line-3": "WITHOUT a calculator"
+    },
+    "calcs": {
+      "calculate": "Calculate",
+      "credit": {
+        "title": "Credit Calculator",
+        "sum": "Credit Sum",
+        "rate": "Credit Rate (year, %)",
+        "periods": "Periods (months)",
+        "payment": "Monthly Payment",
+        "overpayment": "Overpayment"
+      }
+    },
     "topic": {
       "name": "Name",
       "title": "Title",

@@ -38,6 +38,7 @@ import { CardModule } from 'primeng/card';
 import { TopicsView } from './views/topics/topics.view';
 import { QuizView } from './views/quiz/quiz.view';
 import { StatisticsView } from './views/statistics/statistics.view';
+import { CreditcalcView } from './views/calcs/creditcalc/creditcalc.view';
 
 export function createTranslateLoader(http: HttpClient) {
   return new MultiTranslateHttpLoader(http, [
@@ -67,6 +68,7 @@ export function configServiceFactory(configService: ConfigurationService) {
     TopicsView,
     QuizView,
     StatisticsView,
+    CreditcalcView,
   ],
   imports: [
     CommonModule,
@@ -106,7 +108,7 @@ export function configServiceFactory(configService: ConfigurationService) {
       deps: [ConfigurationService],
       multi: true,
     },
-    { provide: JWT_INTERCEPT_URLS, useValue: [environment.lboxUrl.base, environment.apiUrl, environment.lboxUrl.auth] },
+    { provide: JWT_INTERCEPT_URLS, useValue: [environment.apiUrl, environment.lboxUrl] },
     { provide: APP_CONFIGURATION, useValue: environment },
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },

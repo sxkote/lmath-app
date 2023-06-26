@@ -1,5 +1,5 @@
 #STAGE 1
-FROM node:latest AS build
+FROM node:20.3.1 AS build
 # install angular cli to run ng-build
 WORKDIR /usr/src/app
 RUN npm i @angular/cli
@@ -7,7 +7,7 @@ RUN npm i @angular/cli
 # copy all file to build the app
 WORKDIR /usr/src
 # copy LIBS to npm/ folder
-COPY LIB/npm/lbox-shared.tgz LIB/npm/lbox-auth.tgz ./npm/
+COPY LIB/npm/lbox-shared.tgz LIB/npm/lbox-auth.tgz ./LIB/npm/
 # copy package.json to app/ folder
 COPY LMath.App/package.json LMath.App/package-lock.json ./app/
 # run `npm install` in app/ folder
