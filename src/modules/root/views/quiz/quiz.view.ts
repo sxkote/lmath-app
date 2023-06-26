@@ -23,10 +23,7 @@ export class QuizView implements OnInit {
   @ViewChild('answerForm') answerForm!: NgForm;
   @ViewChild('inputAnswer') inputAnswer!: any;
 
-  constructor(private route: ActivatedRoute,
-              private router: Router,
-              private quizService: QuizService,
-              private dappService: DappService) {
+  constructor(private route: ActivatedRoute, private router: Router, private quizService: QuizService, private dappService: DappService) {
   }
 
   async ngOnInit() {
@@ -36,7 +33,7 @@ export class QuizView implements OnInit {
     await this.reload();
   }
 
-  focusInput(timeout: number = 100) {
+  focusInput(timeout = 100) {
     // this will make the execution after the visibility changes
     setTimeout(() => {
       this.inputAnswer.nativeElement.focus();

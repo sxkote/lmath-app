@@ -1,5 +1,3 @@
-install-lbox-raw:
-	npm install ..\..\LBox\npm\lbox-shared.tgz && npm install ..\..\LBox\npm\lbox-auth.tgz
 install-lbox:
 	npm install ..\LIB\npm\lbox-shared.tgz && npm install ..\LIB\npm\lbox-auth.tgz
 

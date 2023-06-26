@@ -1,5 +1,5 @@
 export class CalcHelpers {
-  static RoundDecimal(value: number, decimals: number = 2): number {
+  static RoundDecimal(value: number, decimals = 2): number {
     const coefficient = Math.pow(10, decimals);
     return Math.round(value * coefficient) / coefficient;
   }
@@ -10,9 +10,9 @@ export interface ICalculatorModel {
 }
 
 export class CreditCalculatorModel implements ICalculatorModel {
-  sum: number = 0;
-  rate: number = 0;
-  periods: number = 0;
+  sum = 0;
+  rate = 0;
+  periods = 0;
 
   get monthRate() {
     return this.rate / 100 / 12;
